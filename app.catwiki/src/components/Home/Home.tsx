@@ -15,7 +15,6 @@ export function Home() {
   }, []);
 
   const onBreedSelect = (e: React.SyntheticEvent, id: string) => {
-    console.log('id', id);
     navigate(`/breeds/${id}`);
   };
 
