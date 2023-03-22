@@ -1,4 +1,5 @@
 # CatWiki - Sam Henry
+![badge](https://github.com/samofwise/catwiki/actions/workflows/actions.yml/badge.svg)
 
 Here is my code after 90 minutes.\
 Thank you for the opportunity to demonstrate my skillset
