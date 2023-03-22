@@ -13,6 +13,7 @@
     "eslint.enable": true,
     "eslint.format.enable": true,
 		"files.autoSave": "afterDelay",
-		"eslint.workingDirectories": ["api.catwiki", "app.catwiki"]
+		"eslint.workingDirectories": ["api.catwiki", "app.catwiki"],
+		"prettier.eslintIntegration": true
 	}
 }
