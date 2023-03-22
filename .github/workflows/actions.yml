@@ -93,5 +93,5 @@ jobs:
           application_name: CatWiki
           environment_name: CatWiki-env
           region: ap-southeast-2
-          version_label: version-${{github.run_number}}
+          version_label: prod-version-${{github.run_number}}
           deployment_package: deploy.zip
