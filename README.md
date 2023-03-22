@@ -1,83 +1,41 @@
-# CatWiki
+# CatWiki - Sam Henry
 
-This is a basic template to get you started with the CatWiki challenge.
-It contains a frontend and a backend, with some very basic interaction
-between them. Feel free to modify whatever you wish, or to start 
-completely from scratch! :smiley_cat:
+Here is my code after 90 minutes.\
+Thank you for the opportunity to demonstrate my skillset
 
-## Starting the backend
+App: [catwiki.samhenry.tech](http://catwiki.samhenry.tech)\
+Api: [catwiki-env.eba-gfhvgi9j.ap-southeast-2.elasticbeanstalk.com](http://catwiki-env.eba-gfhvgi9j.ap-southeast-2.elasticbeanstalk.com)
 
-To start up the backend Node.js server, run the following command in your
-terminal (note: you'll need to have Node v16.x or above installed):
+## Things I have used/done
 
-```
-npm start
-```
+General
+- Cleaned up folders using `api.catwiki` and `app.catwiki` - Create clear distinction, while maintaining a single repo
+- Used folders to logcally separate code including `src`, `models`, `services`, `api`
+- Used `axios` allowing for api calls to return typed data
 
-The server will run on port 3001 by default. You can test it by running
-something like this:
+Hosting / Deployments
+- Hosted the App on AWS S3 and Api on AWS Elastic Beanstalk
+- Implemented Github actions for automatic deployments with CI/CD
 
-```
-curl localhost:3001/api
-{"message":"Hello from CatWiki!"}
-```
+React App
+- Typescript - Strongly typing javascript code is always a win
+- Material UI - A great UI library, highly used in the industry. Helps create good looking frontends easily
+- Eslint based on industry standards (airbnb, prettier) - Best way to maintain good coding styles
 
-## Starting the frontend
+NodeJs Api
+- Creating a service layer - This is because this api combines multiple sources of data and how that occurs is bussiness logic
+- Swagger UI - Easy way to generate documentation for a public facing api including allowing users to interact with your api
 
-Open a new tab, and run the following commands in your terminal:
 
-```
-cd client
-npm start
-```
+## Current State
 
-This should open up a new page in your default web browser at `localhost:3000`.
-At this point, you should see the placeholder CatWiki app homepage.
+I ran out of time so I wasn't able to implement all the features requested.
 
-## Running frontend tests
+## Things I wanted to implement
 
-From the `client` directory, run the following:
-
-```
-npm test
-```
-
-This will run the test suite for you.
-
-## Deploying to Heroku
-
-First, make sure you have a Heroku account, and have successfully logged
-in to Heroku on the command line via `heroku login`.
-
-You'll need to create a new Heroku app (if you haven't already). You can
-do this with the following (replace `${insert-your-app-name-here}` with the
-word `catwiki` followed by your actual name, e.g. `catwiki-johnsmith`):
-
-```
-heroku app:create ${insert-your-app-name-here}
-```
-
-Next we need to add a Git remote for Heroku and commit any changes:
-
-```
-heroku git:remote -a ${insert-your-app-name-here}
-git add .
-git commit -am "Deploy app to Heroku"
-```
-
-Finally we can push our code to the Heroku remote, which will automatically
-build and run our app for us. 
-
-```
-git push heroku master
-```
-
-You'll then be able to access your app at 
-`http://${insert-your-app-name-here}.herokuapp.com`! :tada:
-
-## Pushing changes to your GitHub repository
-
-```
-git remote add origin git@github.com:${your-github-username}/catwiki.git
-git push origin master
-```
+- Get images from thecatapi and bundle them into one call to my api
+- Add appropriate swagger documentation to the api
+- Make the front end React app look better
+- Implement front end and backend tests
+- Add a data storage for the most searched cats
+- Clean up folders for the React app
