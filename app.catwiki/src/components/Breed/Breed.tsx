@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-one-expression-per-line */
+// eslint-disable-next-line import/no-extraneous-dependencies
+
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { getBreed } from '../../api/catwiki';
 import BreedModel from '../../models/Breed';
 
@@ -8,15 +10,20 @@ function Breed() {
   const { id } = useParams();
 
   const [breed, setBreed] = useState<BreedModel>({} as BreedModel);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
       if (id) setBreed(await getBreed(id));
+      setLoading(false);
     })();
   }, []);
 
-  return (
+  return loading ? (
+    <div>Getting your cat&apos;s de-tails...</div>
+  ) : (
     <>
+      <NavLink to="/">Back </NavLink>
       <h1>{breed.name}</h1>
       <p>{breed.description}</p>
       <div>
