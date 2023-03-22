@@ -3,7 +3,7 @@ import Breed from '../models/Breed';
 import SimpleBreed from '../models/SimpleBreed';
 
 // eslint-disable-next-line no-restricted-globals
-const baseUrl = location.hostname === 'localhost' ? 'http://localhost:3001' : 'http://catwiki-env.eba-gfhvgi9j.ap-southeast-2.elasticbeanstalk.com';
+const baseUrl = location.hostname === 'localhost' ? 'http://localhost:3001' : 'http://api-catwiki.samhenry.tech';
 
 export const getBreeds = async () => {
   const result = await axios.get<SimpleBreed[]>(`${baseUrl}/breeds`);
