@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Breed from '../models/Breed';
 import SimpleBreed from '../models/SimpleBreed';
 
 // eslint-disable-next-line no-restricted-globals
@@ -10,6 +11,6 @@ export const getBreeds = async () => {
 };
 
 export const getBreed = async (id: string) => {
-  const result = await axios.get<SimpleBreed[]>(`${baseUrl}/breeds/${id}`);
+  const result = await axios.get<Breed>(`${baseUrl}/breeds/${id}`);
   return result.data;
 };
