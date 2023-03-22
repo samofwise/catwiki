@@ -1,0 +1,20 @@
+{
+  "definition": {
+    "openapi": "3.0.0",
+    "info": {
+      "title": "CatWiki - Sam Henry",
+      "version": "1.0.0",
+      "description": "Node Js Api for Awesome Cat things",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      },
+      "contact": {
+        "name": "Sam Henry"
+      }
+    }
+  },
+  "apis": [
+    "./routes/*.js"
+  ]
+}
