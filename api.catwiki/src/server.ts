@@ -15,7 +15,7 @@ const whitelist = ['http://localhost:3000', 'http://catwiki.samhenry.tech'];
 
 const corsOptions: CorsOptions = {
   origin(origin, callback) {
-    const response = origin && whitelist.includes(origin) ? { error: null, origin: true } : ({ error: new Error('Not allowed by CORS') });
+    const response = origin === undefined || whitelist.includes(origin) ? { error: null, origin: true } : ({ error: new Error('Not allowed by CORS') });
     callback(response.error, response.origin);
   },
 };
